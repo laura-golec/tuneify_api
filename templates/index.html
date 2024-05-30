@@ -3,37 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tuneify</title>
+    <title>Tuneify API</title>
     <link rel="icon" href="{{url_for('static', filename='logo.png')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
 </head>
 
 <body>
     <div>
-        <label for="apiKey"> API Key</label>
-        <input type="text" id="apiKey">
-        <input type="button" onclick="updateApiKey()" value="Update">
-    </div>
-    <div>
-        <label for="search"> Search</label>
-        <input type="text" id="search">
-        <input type="button" onclick="getSearch()" value="Search">
-        <div class="results">
-            <div id="artistList"></div>
-            <div id="albumList"></div>
-            <div id="trackList"></div>
+        <div>
+            <span>You have reached the Tuneify API!</span>
+        </div>
+        <div>
+            <input type="button" onclick="getConfirmation()" value="Check">
+        </div>
+        <div>
+            <span id="confirmation"></span>
         </div>
     </div>
-    <div>
-        <label for="browse"> Browse</label>
-        <input type="text" id="browse">
-        <input type="button" onclick="getBrowse()" value="Browse">
-        <div class="results">
-            <div id="browseList"></div>
-        </div>
-    </div>
-    <script type="module" src="{{url_for('static', filename='index.js')}}"></script>
-    <script type="module" src="{{url_for('static', filename='script.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='script.js')}}"></script>
 </body>
 
 </html>
