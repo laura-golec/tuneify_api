@@ -1,0 +1,96 @@
+{
+    "downloads": {
+        "folder": "string",
+        "source_subdirectories": "bool",
+        "concurrency": "bool",
+        "max_connections": "range=-1:255",
+        "requests_per_minute": "range=-1:255"
+    },
+    "qobuz": {
+        "quality": "range=1:4",
+        "download_booklets": "bool",
+        "use_auth_token": "bool",
+        "email_or_userid": "string",
+        "password_or_token": "string",
+        "app_id": "forbidden",
+        "secrets": "forbidden"
+    },
+    "tidal": {
+        "quality": "range=0:3",
+        "download_videos": "bool",
+        "user_id": "forbidden",
+        "country_code": "forbidden",
+        "access_token": "forbidden",
+        "refresh_token": "forbidden",
+        "token_expiry": "forbidden"
+    },
+    "deezer": {
+        "quality": "range=0:2",
+        "arl": "string",
+        "use_deezloader": "bool",
+        "deezloader_warnings": "bool"
+    },
+    "soundcloud": {
+        "quality": "range=0",
+        "client_id": "string",
+        "app_version": "string"
+    },
+    "youtube": {
+        "quality": "range=0",
+        "download_videos": "bool",
+        "video_downloads_folder": "string"
+    },
+    "database": {
+        "downloads_enabled": "bool",
+        "downloads_path": "string",
+        "failed_downloads_enabled": "bool",
+        "failed_downloads_path": "string"
+    },
+    "conversion": {
+        "enabled": "bool",
+        "codec": "codec",
+        "sampling_rate": "range=0:200000",
+        "bit_depth": "range=16,24",
+        "lossy_bitrate": "range=0:360"
+    },
+    "qobuz_filters": {
+        "extras": "bool",
+        "repeats": "bool",
+        "non_albums": "bool",
+        "features": "bool",
+        "non_studio_albums": "bool",
+        "non_remaster": "bool"
+    },
+    "artwork": {
+        "embed": "bool",
+        "embed_size": "size",
+        "embed_max_width": "range=-1:5000",
+        "save_artwork": "bool",
+        "saved_max_width": "range=-1:5000"
+    },
+    "metadata": {
+        "set_playlist_to_album": "bool",
+        "renumber_playlist_tracks": "bool",
+        "exclude": "string_list"
+    },
+    "filepaths": {
+        "add_singles_to_folder": "bool",
+        "folder_format": "folder",
+        "track_format": "track",
+        "restrict_characters": "bool",
+        "truncate_to": "range=3:120"
+    },
+    "lastfm": {
+        "source": "sources",
+        "fallback_source": "sources"
+    },
+    "cli": {
+        "text_output": "bool",
+        "progress_bars": "bool",
+        "max_search_results": "range=0:150"
+    },
+    "misc": {
+        "version": "forbidden",
+        "check_for_updates": "bool"
+    }
+}
