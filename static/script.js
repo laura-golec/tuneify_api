@@ -1,4 +1,4 @@
-const apiUrl = 'https://api.lauragolec.com/tuneify_api/'
+const apiUrl = 'https://tuneify.lauragolec.com/'
 
 function getConfirmation() {
     fetch(`${apiUrl}confirm/`)

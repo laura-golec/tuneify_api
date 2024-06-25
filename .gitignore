@@ -1,2 +1,10 @@
 .env
 ./temp
+__pycache__
+venv/
+*.pyc
+*.log
+__pycache__/settings.cpython-310.pyc
+__pycache__/keys.cpython-310.pyc
+__pycache__/helper_functions.cpython-310.pyc
+__pycache__/api_handlers.cpython-310.pyc

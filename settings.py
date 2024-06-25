@@ -97,11 +97,9 @@ def update_config_value(config, path, value):
 
 def validate_change(value, rule):
     if 'range' in rule:
-        print('in range opt ', value, rule)
         return validate_range(value, rule)
-    elif value in validation_dict:
-        print('in other opt ', value, rule)
-        return validation_dict[value](value)
+    elif rule in validation_dict:
+        return validation_dict[rule](value)
     else:
         print('failing ', value, rule)
         return False
@@ -119,4 +117,4 @@ def change_settings(file_path, path, value):
         update_config_value(config, path, value)
         save_toml_config(config, file_path)
         return {'Success': 'changed rule!'}
-    return {'Error': 'Incorrect change'}
+    return {'Error': f'{rule in validation_dict}'}
